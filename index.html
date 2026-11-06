@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milana | My Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">Milana<span>.</span></h2>
+        <button id="menuButton" onclick="toggleMenu()">Menu</button>
+        <nav id="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About me</a>
+            <a href="#life">My life</a>
+            <a href="#contact">My goals</a>
+            <a href="#write">Write to me</a>
+        </nav>
+    </header>
+
+    <main>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p class="small-title">HELLO, WELCOME TO MY WEBSITE</p>
+            <h1>STUDENT &<br><span>FUTURE DEVELOPER</span></h1>
+            <p>I am learning new skills, exploring web design, and enjoying every step of my journey.</p>
+            <a class="button" href="#about">About me</a>
+            <a class="button dark-button" href="#life">My life</a>
+        </div>
+        <div class="hero-photo">
+            <img src="images/my_selfie.jpeg" alt="A photo of me">
+            <p>Learning, growing, and making memories.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-text">
+            <p class="small-title">A LITTLE ABOUT ME</p>
+            <h2>About <span>me</span></h2>
+            <p>Hello! My name is Milana. I am a student and I am just starting my journey in programming.</p>
+            <p>At the moment, I am learning frontend development, HTML, CSS, and Java. I am still a beginner, so I learn step by step and practise what I study in class.</p>
+            <p>I do not have big projects yet, but I am excited to gain experience and create my own websites in the future.</p>
+            <p>When I am not studying, I enjoy spending time with my friends, going for walks, taking photos, and visiting beautiful places. These moments make me happy and give me great memories.</p>
+        </div>
+        <div class="about-photo">
+            <img src="images/friends_mountain.jpeg" alt="A day out with friends">
+            <p>Good friends and good memories.</p>
+        </div>
+    </section>
+
+    <section id="life" class="life">
+        <p class="small-title">MY EVERYDAY MOMENTS</p>
+        <h2>My life beyond <span>coding</span></h2>
+        <p class="section-description">I am still learning and building my skills. For now, I spend time studying, enjoying nature, and making memories with my friends.</p>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img onclick="openModal(this)" src="images/friends.jpeg" alt="A photo with friends">
+                <h3>Friends</h3>
+                <p>I love spending time with my friends, talking, laughing, and sharing little moments together.</p>
+            </div>
+            <div class="photo-card">
+                <img onclick="openModal(this)" src="images/mountains.jpeg" alt="Beautiful mountains">
+                <h3>Nature and walks</h3>
+                <p>I enjoy seeing beautiful places and taking photos of nature when I have free time.</p>
+            </div>
+            <div class="photo-card">
+                <img onclick="openModal(this)" src="images/friends_bus.jpeg" alt="Friends travelling together">
+                <h3>Little adventures</h3>
+                <p>Even a simple trip can become a special memory when I spend it with good people.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div>
+            <p class="small-title">MY GOALS</p>
+            <h2>Still learning,<br><span>always growing.</span></h2>
+            <p>Thank you for visiting my little website!</p>
+        </div>
+        <div class="contact-note">
+            <h3>My current goals</h3>
+            <p>Learn more HTML and CSS.</p>
+            <p>Improve my Java programming skills.</p>
+            <p>Build my first real website project.</p>
+        </div>
+    </section>
+
+    <section id="write" class="write">
+        <h2>Write <span>to me</span></h2>
+        <form id="contactForm" onsubmit="checkForm(event)">
+            <label for="name">Your name</label>
+            <input type="text" id="name">
+
+            <label for="email">Your email</label>
+            <input type="text" id="email">
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <button type="submit" class="button">Send</button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
+    </main>
+
+    <footer>
+        <p><a href="#home">Home</a> | <a href="#about">About me</a> | <a href="#life">My life</a> | <a href="#contact">My goals</a> | <a href="#write">Write to me</a></p>
+        <p>Milana's Website © 2026</p>
+    </footer>
+
+    <div id="modal" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Big photo">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
